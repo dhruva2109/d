@@ -1,0 +1,64 @@
+}
+
+.signup h3 {
+    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.signup .header {
+    flex-grow: 2;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+@@ -149,7 +149,7 @@ body {
+}
+
+.signup .body ul {
+    width: calc(300px + 20vw);
+    width: calc(20ch + 25vw);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+@@ -170,12 +170,14 @@ body {
+    width: 100%;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.4rem;
+    transition: border-color 0.1s linear;
+
+    padding: 0.2rem 0.4rem;
+}
+
+.signup input + span {
+    visibility: hidden;
+    text-wrap: nowrap;
+}
+
+.signup input:focus {
+@@ -188,23 +190,11 @@ body {
+    border-color: var(--color-invalid);
+}
+
+.signup input:invalid:not(:placeholder-shown) + span::after{
+.signup input:invalid:not(:placeholder-shown) + span{
+    visibility: visible;
+    color: var(--color-invalid);
+}
+
+.signup input[type="text"]:invalid:not(:placeholder-shown) + span::after{
+    content: "Please enter a name";
+}
+
+.signup input[type="email"]:invalid:not(:placeholder-shown) + span::after{
+    content: "Please enter a valid email";
+}
+
+.signup input[type="password"]:invalid:not(:placeholder-shown) + span::after{
+    content: "Too short!";
+}
+
+.signup .footer {
+    flex-grow: 4;
+}
